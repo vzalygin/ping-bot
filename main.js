@@ -32,8 +32,6 @@ bot.on("message", async (msg) => {
         }
         bot.sendMessage(chatId, message, { parse_mode: 'MarkdownV2' });
       }
-    } else {
-      bot.sendMessage(chatId, `all not found`);
     }
   } catch (e) {
     bot.sendMessage(chatId, `Something went wrong: ${e}`);
