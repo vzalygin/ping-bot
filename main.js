@@ -2,7 +2,7 @@ const TelegramBot = require("node-telegram-bot-api");
 
 const ids = [1377576664, 947163681,]; //838805281, 734752306];
 
-const token = "5546984481:AAE7lWvJP9xTCYSng3EYgkGyZB1nZWA0D0E";
+const token = process.env.TOKEN;
 // const options = {
 //   polling: true,
 // };
