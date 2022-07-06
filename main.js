@@ -13,9 +13,10 @@ const options = {
 };
 
 const bot = new TelegramBot(token, options);
-
+console.log("Bot online");
 const url = process.env.APP_URL || 'https://floating-falls-26181.herokuapp.com:443';;
 bot.setWebHook(`${url}/bot${token}`);
+console.log(`webhook was created: ${url}`);
 
 bot.on("message", async (msg) => {
   const chatId = msg.chat.id;
@@ -36,4 +37,5 @@ bot.on("message", async (msg) => {
   } catch (e) {
     bot.sendMessage(chatId, `Something went wrong: ${e}`);
   }
+  bot.sendMessage(chatId, 'ping');
 });
