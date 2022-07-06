@@ -31,7 +31,7 @@ bot.on("message", async (msg) => {
             message += `[${name}](tg://user?id=${id}) `;
           }
         }
-        bot.sendMessage(chatId, message, { reply_to_message_id: msg.message.id, parse_mode: 'MarkdownV2' });
+        bot.sendMessage(chatId, message, { reply_to_message_id: msg.message_id, parse_mode: 'MarkdownV2' });
       }
     }
   } catch (e) {
