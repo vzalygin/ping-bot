@@ -1,6 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 
-const ids = [1377576664, 947163681,]; //838805281, 734752306];
+const ids = [1377576664, 947163681, 838805281, 734752306];
 
 const token = process.env.TOKEN;
 // const options = {
@@ -13,7 +13,7 @@ const options = {
 };
 
 const bot = new TelegramBot(token, options);
-console.log("Bot online");
+console.log("bot online");
 const url = process.env.APP_URL || 'https://floating-falls-26181.herokuapp.com:443';;
 bot.setWebHook(`${url}/bot${token}`);
 console.log(`webhook was created: ${url}`);
@@ -37,5 +37,4 @@ bot.on("message", async (msg) => {
   } catch (e) {
     bot.sendMessage(chatId, `Something went wrong: ${e}`);
   }
-  bot.sendMessage(chatId, 'ping');
 });
