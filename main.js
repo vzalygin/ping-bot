@@ -14,7 +14,7 @@ const options = {
 
 const bot = new TelegramBot(token, options);
 
-const url = process.env.APP_URL || 'https://muver-ping-bot.herokuapp.com:443';;
+const url = process.env.APP_URL || 'https://floating-falls-26181.herokuapp.com:443';;
 bot.setWebHook(`${url}/bot${token}`);
 
 bot.on("message", async (msg) => {
