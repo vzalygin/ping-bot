@@ -31,7 +31,7 @@ const setupBot = () => {
   bot.on("message", async (msg) => {
     try {
       if (msg.text !== undefined) {
-        if (msg.text.includes("@all") || msg.text.includes("@all_42bot")) {
+        if (msg.text.includes("@all")) {
           pingAll();
         }
       }
